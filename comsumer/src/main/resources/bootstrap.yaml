@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: comsumer #名称
+
+  cloud:
+    config:
+      uri: http://localhost:7001 #server服务
+      name: comsumer-dev #寻找配置文件(,)隔开是多个配置文件
+      profile: core
+      enabled: true #默认即时true,还是加上吧

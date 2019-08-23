@@ -1,0 +1,14 @@
+
+server:
+  port: 7001 #Server端口,client访问端口 端口默认8888
+
+spring:
+  profiles:
+    active: native #告诉服务,我现在要启用本地配置(优先考虑采用工程目录resources下配置)
+  application:
+    name: config-server #名称
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: D:/work/idea-workspace/root/config/src/main/resources/config/ #明确采用该目录下配置

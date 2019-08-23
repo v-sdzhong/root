@@ -1,0 +1,21 @@
+server:
+  port: 8762
+
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
+
+spring:
+  application:
+    name: comsumer
+  thymeleaf:
+    mode: HTML
+    prefix: classpath:/templates/
+  datasource:
+    username: root
+    url: jdbc:mysql://127.0.0.1:3306/ruoyi?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+    password:
+    driver-class-name: com.mysql.jdbc.Driver
